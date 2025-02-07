@@ -21,6 +21,7 @@
     "types": false
   },
   "scripts": {
+    "vercel-build": "npm install rollup && npm install",
     "clean": "rm -rf ./dist",
     "build": "rollup -c",
     "dev": "parcel ./docs/src/index.html --dist-dir ./docs/dist",
