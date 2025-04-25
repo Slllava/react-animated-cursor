@@ -29,6 +29,8 @@
     "demo:start": "parcel ./docs/src/index.html --dist-dir ./docs/dist",
     "demo:build": "parcel build ./docs/src/index.html --dist-dir ./docs/dist --public-url ./",
     "demo:deploy": "npm run demo:build && gh-pages -d ./docs/dist",
+    "prepare": "npm run build",
+    "prepublish": "rm -rf ./dist && npm run build",
     "lint": "eslint \"lib/**/*.+(ts|tsx)\" --fix ",
     "format": "prettier --write  \"lib/**/*.+(ts|tsx)\""
   },
@@ -54,7 +56,7 @@
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-replace": "^6.0.2",
     "@rollup/plugin-typescript": "^12.1.2",
-    "@types/react": "^19.0.8",
+    "@types/react": "^19.1.2",
     "@types/react-dom": "^19.0.3",
     "@typescript-eslint/eslint-plugin": "^8.23.0",
     "@typescript-eslint/parser": "^8.23.0",
