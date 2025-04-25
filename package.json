@@ -1,6 +1,6 @@
 {
   "name": "@slllava/react-animated-cursor",
-  "version": "2.11.1",
+  "version": "2.11.2",
   "private": false,
   "description": "An animated custom cursor component in React.",
   "type": "module",
@@ -23,9 +23,18 @@
     "types": false
   },
   "scripts": {
+    "vercel-build": "npm install rollup && npm install",
+    "clean": "rm -rf ./dist",
     "build": "rollup -c",
-    "postinstall": "echo done",
-    "prepare": "echo skipping"
+    "dev": "parcel ./docs/src/index.html --dist-dir ./docs/dist",
+    "demo:clean": "rm -rf ./docs/dist",
+    "demo:start": "parcel ./docs/src/index.html --dist-dir ./docs/dist",
+    "demo:build": "parcel build ./docs/src/index.html --dist-dir ./docs/dist --public-url ./",
+    "demo:deploy": "npm run demo:build && gh-pages -d ./docs/dist",
+    "prepare": "npm run build",
+    "prepublish": "rm -rf ./dist && npm run build",
+    "lint": "eslint \"lib/**/*.+(ts|tsx)\" --fix ",
+    "format": "prettier --write  \"lib/**/*.+(ts|tsx)\""
   },
   "keywords": [
     "react cursor",
