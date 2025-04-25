@@ -29,8 +29,6 @@
     "demo:start": "parcel ./docs/src/index.html --dist-dir ./docs/dist",
     "demo:build": "parcel build ./docs/src/index.html --dist-dir ./docs/dist --public-url ./",
     "demo:deploy": "npm run demo:build && gh-pages -d ./docs/dist",
-    "prepare": "npm run build",
-    "prepublish": "rm -rf ./dist && npm run build",
     "lint": "eslint \"lib/**/*.+(ts|tsx)\" --fix ",
     "format": "prettier --write  \"lib/**/*.+(ts|tsx)\""
   },
