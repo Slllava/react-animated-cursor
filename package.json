@@ -2,6 +2,7 @@
   "name": "react-animated-cursor",
   "version": "2.11.1",
   "description": "An animated custom cursor component in React.",
+  "type": "module",
   "author": "Stephen Scaff <stephenscaff.com>",
   "homepage": "https://stephenscaff.github.io/react-animated-cursor/",
   "main": "dist/index.js",
